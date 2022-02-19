@@ -13,6 +13,7 @@ app.use(morgan('dev'))
 const routes = Router()
 routes.get('/', (req, res) => { res.send('<h1 style="border: 3px dashed brown;">Hello World from BROWN endpoint</h1>') })
 routes.get('/hello-world', (req, res) => { res.send(helloWorld()) })
+routes.use('/dist', express.static('./dist'))
 app.use(BASE_URL, routes)
 
 app.listen(process.env.PORT, process.env.HOST, () => {

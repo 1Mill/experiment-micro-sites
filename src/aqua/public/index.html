@@ -8,10 +8,17 @@
 				padding: 1rem;
 			}
 		</style>
+		<script src="https://polyfill.io/v3/polyfill.min.js"></script>
 	</head>
 	<body>
 		<h1>Hello world from AQUA!</h1>
 		<!--#include virtual="/brown"-->
 		<!--#include virtual="/brown/hello-world"-->
+
+		<div style="border: 1px solid black; margin-top: 3rem;"></div>
+		<brown-custom-element message="is this working?">
+			placeholder
+		</brown-custom-element>
+		<script src="/brown/dist/fragments.js" async></script>
 	</body>
 </html>
