@@ -4,8 +4,7 @@ services:
   nginx:
     image: nginx:1-alpine
     depends_on:
-      - blue
-      - red
+      - aqua
     ports:
       - 5000:3000
     volumes:
