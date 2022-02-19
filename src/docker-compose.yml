@@ -34,7 +34,7 @@ services:
     ports:
       - 5002:8080
     volumes:
-      - ./beige:/app
+      - ./brown:/app
     working_dir: /app
 
 
