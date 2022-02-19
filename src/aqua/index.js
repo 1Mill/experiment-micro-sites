@@ -1,7 +1,7 @@
 import express, { Router } from 'express'
 import morgan from 'morgan'
 
-const BASE_URL = Object.freeze('/aqua')
+const BASE_URL = Object.freeze('/')
 
 const app = express()
 
