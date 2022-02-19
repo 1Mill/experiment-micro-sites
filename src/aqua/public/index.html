@@ -16,9 +16,16 @@
 		<!--#include virtual="/brown/hello-world"-->
 
 		<div style="border: 1px solid black; margin-top: 3rem;"></div>
-		<brown-custom-element message="is this working?">
+		<brown-custom-element id="js-update-message" message="is this working?">
 			placeholder
 		</brown-custom-element>
 		<script src="/brown/dist/fragments.cjs" async></script>
+		<script>
+			setTimeout(() => {
+				console.log('Changing message...')
+				const el = document.getElementById('js-update-message')
+				el.setAttribute('message', 'Some new message!')
+			}, 3000)
+		</script>
 	</body>
 </html>

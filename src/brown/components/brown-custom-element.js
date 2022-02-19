@@ -3,6 +3,8 @@ export class BrownCustomElement extends HTMLElement {
 		return ['message']
 	}
 
+	attributeChangedCallback() { this.render() }
+
 	connectedCallback() { this.render() }
 
 	render() {
