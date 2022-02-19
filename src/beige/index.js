@@ -1,7 +1,7 @@
 import express, { Router } from 'express'
 import morgan from 'morgan'
 
-const BASE_URL = Object.freeze('/beige')
+const BASE_URL = Object.freeze('/brown')
 
 const app = express()
 
@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 
 // Namespaced routes (e.g. /aqua/dist/...)
 const routes = Router()
-routes.get('/', (req, res) => { res.send('<h1 style="color: red;">Hello World from BEIGE endpoint</h1>') })
+routes.get('/', (req, res) => { res.send('<h1 style="border: 3px dashed brown;">Hello World from BROWN endpoint</h1>') })
 app.use(BASE_URL, routes)
 
 app.listen(process.env.PORT, process.env.HOST, () => {
