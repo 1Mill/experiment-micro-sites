@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 
 // Namespaced routes (e.g. /aqua/dist/...)
 const routes = Router()
-routes.get('/', (req, res) => { res.send('<h1>Hello World from BEIGE endpoint</h1>') })
+routes.get('/', (req, res) => { res.send('<h1 style="color: red;">Hello World from BEIGE endpoint</h1>') })
 app.use(BASE_URL, routes)
 
 app.listen(process.env.PORT, process.env.HOST, () => {
