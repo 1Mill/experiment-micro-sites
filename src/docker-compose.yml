@@ -5,6 +5,7 @@ services:
     image: nginx:1-alpine
     depends_on:
       - aqua
+      - beige
     ports:
       - 5000:3000
     volumes:
@@ -23,9 +24,9 @@ services:
       - ./aqua:/app
     working_dir: /app
 
-  blue:
+  beige:
     image: node:16-alpine
-    command: npm run serve
+    command: npm run dev
     environment:
       HOST: 0.0.0.0
       NODE_ENV: development
@@ -33,18 +34,32 @@ services:
     ports:
       - 5002:8080
     volumes:
-      - ./blue:/app
+      - ./beige:/app
     working_dir: /app
 
-  red:
-    image: node:16-alpine
-    command: npm run serve
-    environment:
-      HOST: 0.0.0.0
-      NODE_ENV: development
-      PORT: 8080
-    ports:
-      - 5003:8080
-    volumes:
-      - ./red:/app
-    working_dir: /app
+
+  # blue:
+  #   image: node:16-alpine
+  #   command: npm run serve
+  #   environment:
+  #     HOST: 0.0.0.0
+  #     NODE_ENV: development
+  #     PORT: 8080
+  #   ports:
+  #     - 5002:8080
+  #   volumes:
+  #     - ./blue:/app
+  #   working_dir: /app
+
+  # red:
+  #   image: node:16-alpine
+  #   command: npm run serve
+  #   environment:
+  #     HOST: 0.0.0.0
+  #     NODE_ENV: development
+  #     PORT: 8080
+  #   ports:
+  #     - 5003:8080
+  #   volumes:
+  #     - ./red:/app
+  #   working_dir: /app
