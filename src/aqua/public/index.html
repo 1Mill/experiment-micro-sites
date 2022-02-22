@@ -12,12 +12,26 @@
 		<script src="https://cdn.tailwindcss.com/3.0.18"></script>
 		<script src="https://polyfill.io/v3/polyfill.min.js"></script>
 	</head>
-	<body>
-		<h1>Hello world from AQUA!</h1>
-		<!--#include virtual="/brown"-->
-		<!--#include virtual="/brown/hello-world"-->
+	<body class="grid gap-3">
+		<div class="flex items-center justify-between">
+			<h1 class="text-4xl">Welcome to the AQUA store</h1>
+			<div>TODO Checkout Team: Cart</div>
+		</div>
+		<div class="p-3 border-2 rounded flex gap-3">
+			<img src="https://picsum.photos/250" class="rounded-full border-2 border-black" />
+			<div>
+				<h2 class="text-3xl">Some Product Name</h2>
+				<p>Some product description...</p>
+				<div>TODO Checkout Team: Buy</div>
+			</div>
+		</div>
+		<div class="p-3 border-2 rounded">
+			TODO Search Term: Related Products
+		</div>
 
 		<div style="border: 1px solid black; margin-top: 3rem;"></div>
+		<!--#include virtual="/brown"-->
+		<!--#include virtual="/brown/hello-world"-->
 		<brown-custom-element id="js-update-message" message="is this working?">
 			placeholder
 		</brown-custom-element>
